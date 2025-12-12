@@ -9,12 +9,12 @@ header {
     text-align: center;
     background: #333131;
     color: white;
-    padding: 20px;
+    padding: 25px 20px;
 }
 
 nav a {
     color: white;
-    margin: 0 10px;
+    margin: 0 12px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -25,34 +25,61 @@ nav a:hover {
 
 .box {
     background: white;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 25px auto;
+    padding: 25px;
     width: 90%;
-    max-width: 700px;
-    border-radius: 10px;
+    max-width: 750px;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .box h2 {
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .profile {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
     object-fit: cover;
+    transition: 0.3s;
 }
+
 .profile:hover {
-    content: url(img/profile2.jpg)
+    content: url(img/profile2.jpg);
+    transform: scale(1.05);
 }
-.project-card {
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
     background: #e9e9e9;
     margin: 10px 0;
-    padding: 15px;
+    padding: 12px;
     border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#skills li:hover {
+    background: #333131;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-card {
+    background: #e9e9e9;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
@@ -62,7 +89,46 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-/* FOOTER */
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 18px rgba(0,0,0,0.2);
+}
+
+#contact p {
+    text-align: center;
+    font-size: 18px;
+}
+
+#contact a {
+    color: #333131;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Hubungi Saya */
+#contact button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 20px;
+    background: #333131;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#contact button:hover {
+    background: #4b4b4b;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(58, 59, 61, 0.8);
+}
+
 footer {
     text-align: center;
     padding: 15px;
@@ -70,7 +136,7 @@ footer {
     color: white;
     margin-top: 20px;
 }
- 
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -80,7 +146,6 @@ footer {
     animation: fadeIn 1s ease-in-out;
 }
 
- 
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -95,12 +160,12 @@ footer {
 .slide-up {
     animation: slideUp 0.8s ease-out;
 }
- 
+
 .grow:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
- 
+
 .glow:hover {
     box-shadow: 0 0 15px rgba(58, 59, 61, 0.8);
     transform: translateY(-5px);
@@ -122,4 +187,24 @@ footer {
 
 @keyframes blink {
     50% { border-color: transparent; }
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .box {
+        padding: 18px;
+    }
+
+    #contact p {
+        font-size: 16px;
+    }
 }
